@@ -1,0 +1,23 @@
+name: Deploy static to GitHub Pages
+on:
+  push:
+    branches:
+      - add-paypal-server-and-deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Copy static files to build dir
+        run: |
+          mkdir -p build
+          cp -r public/* build/ || true
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
