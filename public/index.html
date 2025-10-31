@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Code Crimson — Menstrual Health Fundraiser</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Replace YOUR_PAYPAL_CLIENT_ID with your client id OR keep as "sb" for PayPal sandbox rendering -->
+  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD" defer></script>
+  <script defer src="client.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Help Us Raise ₹1,00,000</h1>
+      <p class="subtitle">to end period poverty — one pad at a time</p>
+
+      <div class="poster-and-cta">
+        <img src="poster.jpg" alt="Fundraiser poster" class="poster" />
+        <div class="donation-card">
+          <h2>Donate Now</h2>
+          <label for="donation-amount">Amount</label>
+          <div class="amount-row">
+            <input id="donation-amount" type="number" min="1" value="500" />
+            <select id="currency">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="INR" selected>INR</option>
+              <option value="GBP">GBP</option>
+            </select>
+          </div>
+
+          <!-- PayPal button container (rendered by client.js) -->
+          <div id="paypal-button-container"></div>
+
+          <p class="or">Or donate via bank transfer / UPI (details below)</p>
+
+          <div class="bank-details">
+            <strong>Bank details – Code Crimson Trust</strong><br/>
+            A/c no : 6636002100002053<br/>
+            IFSC – PUNB0663600<br/>
+            Branch – Kharangajhar, Jamshedpur<br/>
+            <em>Scan the QR on the poster for UPI</em>
+          </div>
+
+          <div class="progress">
+            <div class="progress-labels">
+              <span id="raised-text">₹0</span>
+              <span>Goal: ₹1,00,000</span>
+            </div>
+            <div class="progress-bar"><div id="progress-fill"></div></div>
+          </div>
+
+          <div id="thankyou" class="thankyou" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="about">
+      <h3>About the fundraiser</h3>
+      <p>
+        Your donation provides menstrual products to 300+ young girls in government schools and colleges,
+        helping end period poverty and providing dignity and health.
+      </p>
+      <ul>
+        <li>Distribution of eco-friendly menstrual products to 300+ girls</li>
+        <li>Workshops, awareness drives and community programs</li>
+        <li>Sustainable, reusable sanitary pads</li>
+      </ul>
+    </section>
+
+    <section class="who">
+      <h3>Who we are</h3>
+      <p>
+        Registered under the Indian Trusts Act and listed on NITI Aayog’s NGO-DARPAN.
+      </p>
+      <p>
+        At Code Crimson, we believe that menstrual health is not a privilege — it’s a basic right. We are a
+        non-profit organization dedicated to breaking taboos, spreading awareness, and empowering communities
+        through menstrual education.
+      </p>
+      <p>
+        Through our initiatives, we’ve distributed 800+ reusable sanitary pads to those in need, providing
+        a sustainable and eco-friendly solution while promoting dignity and health.
+      </p>
+    </section>
+
+    <section class="contact">
+      <h3>Contact & Social</h3>
+      <p>@code.crimson_</p>
+      <p>If you want bank details or a receipt setup, reply with the exact bank/UPI details and GST (if any) and I will add them here.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><small>© Code Crimson — Fundraiser for menstrual health</small></div>
+  </footer>
+</body>
+</html>
